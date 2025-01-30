@@ -1,0 +1,9 @@
+function y = fug(Z , P , T)
+Tc = 154.6;
+Pc = 5.046*10^6;
+R = 8.314;
+b = 0.0778*R*Tc*(1/Pc);
+A = (a(T)*P)/(R*T)^2;
+B = (b*P)/(R*T);
+sq = sqrt(2);
+y = exp(Z-1-log(Z-B)-A/B/2/sq*log((Z + (1+sq)*B)./(Z + (1-sq)*B)));
